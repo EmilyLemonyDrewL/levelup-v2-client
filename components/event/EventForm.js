@@ -126,9 +126,11 @@ EventForm.propTypes = {
     date: PropTypes.string,
     time: PropTypes.string,
     // eslint-disable-next-line react/forbid-prop-types
-    game: PropTypes.shape({
-      id: PropTypes.number,
-    }),
+    // game: PropTypes.shape({
+    //   id: PropTypes.number,
+    // }),
+    // eslint-disable-next-line react/forbid-prop-types
+    game: PropTypes.object,
     // eslint-disable-next-line react/forbid-prop-types
     userId: PropTypes.object,
   }),

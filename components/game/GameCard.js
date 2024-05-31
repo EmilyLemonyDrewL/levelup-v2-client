@@ -20,7 +20,7 @@ const GameCard = ({
         <Card.Text>{numberOfPlayers} players needed</Card.Text>
       </Card.Body>
       <Card.Footer className="text-muted">Skill Level: {skillLevel}</Card.Footer>
-      <Button onClick={() => router.push(`/games/edit/${id}`)}>Edit</Button>
+      <Button onClick={() => router.push(`/games/update/${id}`)}>Edit</Button>
     </Card>
   );
 };
