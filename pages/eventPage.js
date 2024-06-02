@@ -11,8 +11,8 @@ function ViewEvents() {
   const { user } = useAuth();
 
   useEffect(() => {
-    getEvents().then((data) => setEvents(data));
-  }, []);
+    getEvents(user.uid).then((data) => setEvents(data));
+  }, [user]);
   const showEvents = () => {
     getEvents(user.uid).then((data) => setEvents(data));
   };
@@ -29,7 +29,7 @@ function ViewEvents() {
       <h1>Events</h1>
       {events.map((event) => (
         <section key={`event--${event.id}`} className="event">
-          <EventCard game={event.game} description={event.description} date={event.date} time={event.time} id={event.id} onUpdate={showEvents} />
+          <EventCard game={event.game} description={event.description} date={event.date} time={event.time} id={event.id} onUpdate={showEvents} joined={event.joined} />
         </section>
       ))}
     </article>
